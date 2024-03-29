@@ -1,0 +1,24 @@
+{
+  "name": "ap-config-ignored",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node --loader ts-node/esm ./src/index.ts"
+  },
+  "dependencies": {
+    "edgedb": "1.x"
+  },
+  "devDependencies": {
+    "@edgedb/generate": "0.x",
+    "@eslint/eslintrc": "2.x",
+    "@types/node": "^20.12.3",
+    "@typescript-eslint/eslint-plugin": "6.x",
+    "@typescript-eslint/parser": "6.x",
+    "eslint": "8.x",
+    "eslint-config-prettier": "9.x",
+    "prettier": "3.x",
+    "ts-node": "^10.9.2",
+    "typescript": "5.x"
+  }
+}
