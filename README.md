@@ -7,5 +7,5 @@ yarn
 yarn start
 ```
 
-The Script will execute and throw an error, which is the query failing with the bug.
+The [script](./src/index.ts) will execute and throw an error, which is the query failing with the bug.  
 The query/script should execute fine.
