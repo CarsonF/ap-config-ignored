@@ -13,11 +13,11 @@ const user = await noAPs.queryRequiredSingle<{ id: string }>('select (select Use
 
 // Start transaction with apply_access_policies: default/true
 await client.transaction(async tx => {
-  // Change this next query to run session state of apply_access_policies: false
-  // @ts-ignore simplified logical of what I'm doing
+  // Change this next query to run with a session state of apply_access_policies: false
+  // @ts-ignore simplified logic of what I'm doing in my own codebase
   tx._holder._options = noAPs.options;
 
   // Query should return user because APs are disabled,
-  // but instead errors on "not found" due to AP.
+  // but instead errors on "not found" due to AP being enforced.
   await tx.querySingle(`select <User><uuid>$id`, { id: user.id });
 });
